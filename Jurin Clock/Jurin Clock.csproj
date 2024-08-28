@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>Jurin_Clock</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>clockIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\clock.png" />
+    <None Remove="Resources\clockEmpty.png" />
+    <None Remove="Resources\clockEmptyLight.png" />
+    <None Remove="Resources\clockIcon.ico" />
+    <None Remove="Resources\clockLight.png" />
+    <None Remove="Resources\clockOld.png" />
+    <None Remove="Resources\clockOldLight.png" />
+    <None Remove="Resources\clockRoman.png" />
+    <None Remove="Resources\clockRomanLight.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="clockIcon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\clock.png" />
+    <Resource Include="Resources\clockEmpty.png" />
+    <Resource Include="Resources\clockEmptyLight.png" />
+    <Resource Include="Resources\clockIcon.ico" />
+    <Resource Include="Resources\clockLight.png" />
+    <Resource Include="Resources\clockOld.png" />
+    <Resource Include="Resources\clockOldLight.png" />
+    <Resource Include="Resources\clockRoman.png" />
+    <Resource Include="Resources\clockRomanLight.png" />
+  </ItemGroup>
+
+</Project>

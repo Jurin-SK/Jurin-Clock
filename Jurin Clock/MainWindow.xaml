@@ -1,0 +1,50 @@
+﻿<Window x:Class="Jurin_Clock.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Jurin_Clock"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="300" Width="500" WindowStyle="None" MouseLeftButtonDown="Window_MouseLeftButtonDown" MinHeight="245" MinWidth="482" MaxWidth="540" ResizeMode="NoResize" Icon="Resources/clockIcon.ico">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Menu Background="Transparent" FontSize="15" Width="110" HorizontalAlignment="Left" Name="menu">
+            <MenuItem Header="Style" Name="styl">
+                <CheckBox Content="Dark" Name="dark" Click="dark_Click"></CheckBox>
+                <MenuItem Header="Styles" Name="styles">
+                    <RadioButton Content="Classic" IsChecked="True" Name="classic" Checked="classic_Checked"></RadioButton>
+                    <RadioButton Content="Empty" Name="empty" Checked="empty_Checked"></RadioButton>
+                    <RadioButton Content="Old" Name="old" Checked="old_Checked"></RadioButton>
+                    <RadioButton Content="Roman" Name="roman" Checked="roman_Checked"></RadioButton>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="About" Name="about">
+                <MenuItem Header="About" Name="abouts" Click="abouts_Click"></MenuItem>
+                <MenuItem Header="Github" Name="gith" Click="gith_Click"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <Ellipse Fill="Red" Width="15" Height="15" Grid.Row="0" HorizontalAlignment="Right" Margin="0,0,5,0" MouseLeftButtonDown="close_MouseLeftButtonDown" MouseEnter="close_MouseEnter" Name="close" MouseLeave="close_MouseLeave"></Ellipse>
+        <Grid Width="220" Height="220" Grid.Row="1" HorizontalAlignment="Left" Margin="20,0,0,0">
+            <Rectangle Height="2" Width="90" Fill="Red" Grid.Row="1" HorizontalAlignment="Center" Margin="0,0,90,0" Name="secondHand">
+                <Rectangle.RenderTransform>
+                    <RotateTransform CenterX="90" CenterY="1" Angle="0"></RotateTransform>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Rectangle Height="4" Width="75" Fill="Black" Grid.Row="1" HorizontalAlignment="Center" Name="minuteHand" Margin="0,0,75,0">
+                <Rectangle.RenderTransform>
+                    <RotateTransform CenterX="75" CenterY="2" Angle="0"></RotateTransform>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Rectangle Height="6" Width="60" Fill="Black" Grid.Row="1" HorizontalAlignment="Center" Margin="0,0,60,0" Name="hourHand">
+                <Rectangle.RenderTransform>
+                    <RotateTransform CenterX="60" CenterY="3" Angle="0"></RotateTransform>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Image Grid.Row="1" Source="Resources/clock.png" Width="220" Height="220" Name="clock"></Image>
+        </Grid>
+        <TextBlock Text="21:45:45" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="60" Margin="0,0,25,0" Name="timeFull"/>
+    </Grid>
+</Window>
