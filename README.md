@@ -2,7 +2,7 @@
 ## 📖 Description
 It is a simple and open source clock accessory on background in the C# .NET programming language created by Jurin. The graphics library is the WPF.
 ## 💽 How to download
-* Simply go to this mediafire link:https://www.mediafire.com/file/hoytte6p4eb2ifs/jurin_clock-1.0-x64.zip/file
+* Simply go to this mediafire link:https://www.mediafire.com/file/6nsqpv4rrlw30gs/jurin_clock-x64-1.0.zip/file
 * Be aware of fake download buttons
 * SmartScreen might have flagged it as unsafe because I don't have a certificate.
 * **WARNING: This link can change over time**
